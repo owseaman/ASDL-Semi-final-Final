@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>African STEM Digital Library Home</h1>
+
+<p>Welcome to <em>African STEM Digital Library</em>, a very basic Django website developed as a pre-requisite for the STEM project</a> based on Django (not the movie:)) environment.</p>
+<p>The test site allows users to view available books, corresponding Authors, borrow books and explore the site for dynamic and interesting experience.</p>
+<p> Author: Emmanuel S. Owoeye <p>
+
+
+<h2>Dynamic content</h2>
+
+<p>The library has the following record counts:</p>
+<ul>
+<li><strong>Books:</strong> {{ num_books }}</li>
+<li><strong>Copies:</strong> {{ num_instances }}</li>
+<li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+<li><strong>Authors:</strong> {{ num_authors }}</li>
+</ul>
+
+
+
+ <p>You have visited this page {{ num_visits }}{% if num_visits == 1 or  num_visits == 0 %} time{% else %} times{% endif %}.</p>
+
+{% endblock %}
